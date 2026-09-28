@@ -44,3 +44,7 @@ data/tfidf_cache_200.pkl
 # Local runtime session states (user chat history and personal settings)
 data/chat_history.json
 data/user_settings.json
+
+# Local private reading notes & viva guides
+VIVA_PROJECT_GUIDE.md
+
