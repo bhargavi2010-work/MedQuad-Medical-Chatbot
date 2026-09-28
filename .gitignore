@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment variables
+.env
+.env.local
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Raw unparsed dataset directory
+data/MedQuAD_raw/
+data/medquad.zip
+data/MedQuAD-master/
+
+# Redundant data duplicates and local test caches
+data/embeddings_16358.npy
+data/embeddings_200.npy
+data/embeddings_cache_200.npy
+data/medquad_data.csv
+data/medquad_processed.json
+data/tfidf_16358.pkl
+data/tfidf_200.pkl
+data/tfidf_cache_200.pkl
+
+# Local runtime session states (user chat history and personal settings)
+data/chat_history.json
+data/user_settings.json

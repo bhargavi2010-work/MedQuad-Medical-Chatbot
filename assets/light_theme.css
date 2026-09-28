@@ -1,0 +1,1469 @@
+/* ==============================================================================
+   MedQuAD Medical Q&A Chatbot - Light Theme Stylesheet
+   Matches exactly the 4-panel design specification from the user mockup:
+   Panel 1: Main Chat / Welcome Page 
+   Panel 2: Chat History View
+   Panel 3: About Medical Q&A Assistant View
+   Panel 4: Settings View
+   ============================================================================== */
+
+/* Base Background */
+.stApp {
+    background-color: #f0f7ff !important;
+    color: #0f172a !important;
+}
+
+/* Typography across all pages in Light Theme */
+.stApp h1,
+.stApp h2,
+.stApp h3,
+.stApp h4,
+.chat-header-title,
+.welcome-heading,
+.page-title,
+[style*="color: #ffffff"],
+[style*="color:#ffffff"],
+[style*="color: rgb(255, 255, 255)"] {
+    color: #0f172a !important;
+}
+
+.stApp .welcome-subheading {
+    color: #0284c7 !important;
+}
+
+.stApp .welcome-desc {
+    color: #64748b !important;
+}
+
+.stApp p,
+.stApp div[data-testid="stMarkdownContainer"] p {
+    color: #334155 !important;
+}
+
+/* Code Pills (e.g. all-MiniLM-L6-v2 in Panel 3) */
+.stApp code,
+code {
+    background-color: #dcfce7 !important;
+    color: #15803d !important;
+    border: 1px solid #bbf7d0 !important;
+    border-radius: 4px !important;
+    padding: 1px 6px !important;
+    font-size: 0.88rem !important;
+    font-weight: 500 !important;
+}
+
+/* 1. Sidebar in Light Theme (Panels 1, 2, 3, 4) */
+
+/* Pure White Sidebar with crisp subtle right border */
+.stApp [data-testid="stSidebarContent"],
+[data-testid="stSidebarContent"] {
+    background-color: #ffffff !important;
+    border-right: 1px solid #e2e8f5 !important;
+}
+
+/* Sidebar Title */
+.stApp .sidebar-header-title,
+.sidebar-header-title,
+[data-testid="stSidebar"] .sidebar-header-title {
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    line-height: 1.25 !important;
+}
+
+.stApp [data-testid="stSidebar"] .sidebar-logo-icon {
+    stroke: #1d68f0 !important;
+    color: #1d68f0 !important;
+}
+
+/* Sidebar Section Title (💡 Quick Questions) in soft slate (#64748b) */
+.stApp .sidebar-section-label,
+.sidebar-section-label,
+[data-testid="stSidebar"] .sidebar-section-label {
+    font-size: 0.88rem !important;
+    font-weight: 600 !important;
+    color: #334155 !important;
+    margin: 0 0 8px 0 !important;
+}
+
+/* Sidebar Divider in subtle light grey (#e2e8f0) */
+.stApp .sidebar-divider,
+.sidebar-divider,
+[data-testid="stSidebar"] div[style*="border-top"] {
+    margin-top: 14px !important;
+    margin-bottom: 12px !important;
+    border-top: 1px solid #e2e8f0 !important;
+}
+
+/* Active Navigation Button: Vivid Blue (#1d68f0) with pure white text & icon */
+.stApp [data-testid="stSidebar"] button[kind="primary"],
+.stApp .nav-btn-active div.stButton > button,
+[data-testid="stSidebar"] button[kind="primary"] {
+    background-color: #1d68f0 !important;
+    background: #1d68f0 !important;
+    border: 1px solid #1d68f0 !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    border-radius: 10px !important;
+    padding: 8px 14px !important;
+    font-size: 0.88rem !important;
+    box-shadow: 0 2px 6px rgba(29, 104, 240, 0.25) !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
+}
+
+.stApp [data-testid="stSidebar"] button[kind="primary"] p {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Inactive Navigation Buttons (Panels 1, 2, 3, 4): Soft light ice-blue with crisp border */
+.stApp [data-testid="stSidebar"] button[kind="secondary"],
+.stApp .nav-btn-inactive div.stButton > button,
+[data-testid="stSidebar"] button[kind="secondary"] {
+    background-color: #f8fbfe !important;
+    background: #f8fbfe !important;
+    border: 1px solid #dbeafe !important;
+    color: #334155 !important;
+    font-weight: 500 !important;
+    border-radius: 10px !important;
+    padding: 8px 14px !important;
+    font-size: 0.88rem !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+    display: flex !important;
+    align-items: center !important;
+    text-align: left !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
+    transition: all 0.15s ease !important;
+}
+
+.stApp [data-testid="stSidebar"] button[kind="secondary"] p {
+    color: #334155 !important;
+    font-weight: 500 !important;
+}
+
+.stApp [data-testid="stSidebar"] button[kind="secondary"]:hover,
+.stApp .nav-btn-inactive div.stButton > button:hover,
+[data-testid="stSidebar"] button[kind="secondary"]:hover {
+    background-color: #eff6ff !important;
+    background: #eff6ff !important;
+    color: #1d68f0 !important;
+    border-color: #1d68f0 !important;
+}
+
+.stApp [data-testid="stSidebar"] button[kind="secondary"]:hover p {
+    color: #1d68f0 !important;
+}
+
+/* Sidebar Nav Button Icons */
+.stApp [data-testid="stSidebar"] button [data-testid="stIconMaterial"],
+.stApp [data-testid="stSidebar"] button span.material-symbols-rounded,
+.stApp [data-testid="stSidebar"] button svg,
+[data-testid="stSidebar"] button [data-testid="stIconMaterial"] {
+    font-size: 1.15rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-right: 4px !important;
+    transition: color 0.15s ease !important;
+}
+
+.stApp [data-testid="stSidebar"] button[kind="primary"] [data-testid="stIconMaterial"],
+.stApp [data-testid="stSidebar"] button[kind="primary"] span.material-symbols-rounded,
+.stApp [data-testid="stSidebar"] button[kind="primary"] svg,
+[data-testid="stSidebar"] button[kind="primary"] [data-testid="stIconMaterial"] {
+    color: #ffffff !important;
+    fill: #ffffff !important;
+}
+
+.stApp [data-testid="stSidebar"] button[kind="secondary"] [data-testid="stIconMaterial"],
+.stApp [data-testid="stSidebar"] button[kind="secondary"] span.material-symbols-rounded,
+.stApp [data-testid="stSidebar"] button[kind="secondary"] svg,
+[data-testid="stSidebar"] button[kind="secondary"] [data-testid="stIconMaterial"] {
+    color: #475569 !important;
+    fill: #475569 !important;
+}
+
+.stApp [data-testid="stSidebar"] button[kind="secondary"]:hover [data-testid="stIconMaterial"],
+.stApp [data-testid="stSidebar"] button[kind="secondary"]:hover span.material-symbols-rounded,
+.stApp [data-testid="stSidebar"] button[kind="secondary"]:hover svg,
+[data-testid="stSidebar"] button[kind="secondary"]:hover [data-testid="stIconMaterial"] {
+    color: #1d68f0 !important;
+    fill: #1d68f0 !important;
+}
+
+/* Quick Questions Buttons: White Card Style without Arrow */
+.stApp [data-testid="stSidebar"] .quick-question-box div.stButton > button,
+.stApp .quick-question-box div.stButton > button,
+.quick-question-box div.stButton > button {
+    background-color: #f8fbfe !important;
+    background: #f8fbfe !important;
+    color: #334155 !important;
+    border: 1px solid #dbeafe !important;
+    border-radius: 10px !important;
+    padding: 9px 14px !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    width: 100% !important;
+    margin-bottom: 8px !important;
+    transition: all 0.15s ease !important;
+}
+
+.stApp [data-testid="stSidebar"] .quick-question-box div.stButton > button p,
+.stApp .quick-question-box div.stButton > button p,
+.quick-question-box div.stButton > button p {
+    color: #334155 !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    margin: 0 !important;
+    text-align: left !important;
+}
+
+/* Remove trailing arrow from Quick Questions in Light Theme */
+.stApp .quick-question-box div.stButton > button::after,
+.quick-question-box div.stButton > button::after {
+    display: none !important;
+    content: "" !important;
+}
+
+.stApp [data-testid="stSidebar"] .quick-question-box div.stButton > button:hover,
+.stApp .quick-question-box div.stButton > button:hover,
+.quick-question-box div.stButton > button:hover {
+    border-color: #1d68f0 !important;
+    background-color: #eff6ff !important;
+    background: #eff6ff !important;
+}
+
+.stApp [data-testid="stSidebar"] .quick-question-box div.stButton > button:hover p,
+.stApp .quick-question-box div.stButton > button:hover p,
+.quick-question-box div.stButton > button:hover p {
+    color: #1d68f0 !important;
+}
+
+/* Sidebar Collapse Control Button in Light Theme */
+.stApp [data-testid="stSidebarCollapseButton"],
+.stApp [data-testid="stSidebarCollapsedControl"] button,
+.stApp [data-testid="stExpandSidebarButton"],
+.stApp button[aria-label*="sidebar" i],
+.stApp button[aria-label*="Open sidebar" i],
+.stApp button[aria-label*="Close sidebar" i],
+[data-testid="stSidebarCollapseButton"],
+[data-testid="stSidebarCollapsedControl"] button,
+[data-testid="stExpandSidebarButton"] {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 6px !important;
+    color: #475569 !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+}
+
+.stApp [data-testid="stSidebarCollapseButton"]:hover,
+.stApp [data-testid="stSidebarCollapsedControl"] button:hover,
+.stApp [data-testid="stExpandSidebarButton"]:hover,
+[data-testid="stSidebarCollapseButton"]:hover,
+[data-testid="stExpandSidebarButton"]:hover {
+    background-color: #f1f5f9 !important;
+    border-color: #1d68f0 !important;
+    color: #1d68f0 !important;
+}
+
+.stApp [data-testid="stSidebarCollapseButton"] svg,
+.stApp [data-testid="stSidebarCollapsedControl"] svg,
+.stApp [data-testid="stExpandSidebarButton"] svg,
+[data-testid="stSidebarCollapseButton"] svg,
+[data-testid="stExpandSidebarButton"] svg {
+    fill: #475569 !important;
+    stroke: #475569 !important;
+    color: #475569 !important;
+}
+
+.stApp [data-testid="stSidebarCollapseButton"]:hover svg,
+.stApp [data-testid="stSidebarCollapsedControl"] button:hover svg,
+.stApp [data-testid="stExpandSidebarButton"]:hover svg,
+[data-testid="stSidebarCollapseButton"]:hover svg,
+[data-testid="stExpandSidebarButton"]:hover svg {
+    fill: #1d68f0 !important;
+    stroke: #1d68f0 !important;
+    color: #1d68f0 !important;
+}
+
+/* Sidebar Disclaimer Cards in Light Theme (matching Image 2) */
+.stApp [data-testid="stSidebar"] .sidebar-notice-card,
+.stApp [data-testid="stSidebar"] div[style*="background-color: rgba(30, 58, 138, 0.15)"] {
+    background-color: #f0f7ff !important;
+    border: 1px solid #bfdbfe !important;
+    border-radius: 12px !important;
+    padding: 14px 14px !important;
+    margin-bottom: 12px !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+}
+
+.stApp [data-testid="stSidebar"] .sidebar-notice-icon {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 6px !important;
+    background-color: #2563eb !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+.stApp [data-testid="stSidebar"] .sidebar-notice-title {
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    color: #1d4ed8 !important;
+    letter-spacing: -0.01em !important;
+}
+
+.stApp [data-testid="stSidebar"] .sidebar-notice-body {
+    font-size: 0.77rem !important;
+    color: #475569 !important;
+    line-height: 1.45 !important;
+}
+
+.stApp [data-testid="stSidebar"] .sidebar-emergency-card,
+.stApp [data-testid="stSidebar"] div[style*="background-color: rgba(239, 68, 68, 0.1)"] {
+    background-color: #fef2f2 !important;
+    border: 1px solid #fecaca !important;
+    border-radius: 12px !important;
+    padding: 14px 14px !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+}
+
+.stApp [data-testid="stSidebar"] .sidebar-emergency-title {
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    color: #ef4444 !important;
+    letter-spacing: -0.01em !important;
+}
+
+.stApp [data-testid="stSidebar"] .sidebar-emergency-body {
+    font-size: 0.77rem !important;
+    color: #64748b !important;
+    line-height: 1.45 !important;
+}
+
+/* ==============================================================================
+   2. Panel 1: Welcome Screen & Top Stat Badges
+   ============================================================================== */
+
+/* Stat Badges in Panel 1: Soft ice-blue pill (#f1f7fe) with royal navy number and soft blue label, matching Image 2 */
+.stApp .stat-badge,
+.stat-badge {
+    background-color: #f1f7fe !important;
+    background: #f1f7fe !important;
+    border: 1px solid #c7dcfc !important;
+    border-radius: 8px !important;
+    color: #3764bd !important;
+    box-shadow: none !important;
+    padding: 6px 14px !important;
+    font-size: 0.84rem !important;
+    font-weight: 500 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.stApp .stat-badge span,
+.stat-badge span {
+    color: #3764bd !important;
+}
+
+.stApp .stat-badge-bold,
+.stat-badge-bold {
+    color: #0f3b9e !important;
+    font-weight: 700 !important;
+    margin-right: 4px !important;
+}
+
+/* Robot Mascot Circle in Light Theme */
+.stApp .neon-mascot-circle {
+    border-color: #38bdf8 !important;
+    box-shadow: 0 0 15px #38bdf8, 0 0 35px rgba(56, 189, 248, 0.6), 0 0 60px rgba(14, 165, 233, 0.35) !important;
+}
+
+/* Bottom Bar & Chat Input in Panel 1 */
+.stApp [data-testid="stBottom"],
+.stApp [data-testid="stBottom"] > div,
+.stApp [data-testid="stBottomBlockContainer"],
+.stApp .stBottom,
+.stApp .stBottom > div,
+.stApp .stChatFloatingInputContainer,
+[data-testid="stBottom"],
+[data-testid="stBottom"] > div,
+[data-testid="stBottomBlockContainer"],
+.stBottom,
+.stBottom > div {
+    background-color: #f0f7ff !important;
+    background: #f0f7ff !important;
+    border-top: none !important;
+    box-shadow: none !important;
+}
+
+/* Chat Input Outer Container: Clean white card, subtle blue border & elevation */
+.stApp [data-testid="stChatInput"],
+[data-testid="stChatInput"] {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border: 1px solid #dbeafe !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 18px rgba(37, 99, 235, 0.07) !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.stApp [data-testid="stChatInput"]:focus-within,
+[data-testid="stChatInput"]:focus-within {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.25), 0 4px 18px rgba(37, 99, 235, 0.1) !important;
+}
+
+/* Inner elements and wrappers inside stChatInput must be completely transparent (removes black background) */
+.stApp [data-testid="stChatInput"] *:not(button):not(button *),
+.stApp [data-testid="stChatInput"] > div,
+.stApp [data-testid="stChatInput"] div,
+.stApp [data-testid="stChatInput"] form,
+.stApp [data-testid="stChatInput"] div[data-baseweb="textarea"],
+.stApp [data-testid="stChatInput"] div[data-baseweb="base-input"],
+.stApp div[data-baseweb="textarea"],
+.stApp div[data-baseweb="base-input"],
+[data-testid="stChatInput"] *:not(button):not(button *),
+[data-testid="stChatInput"] > div,
+[data-testid="stChatInput"] div,
+[data-testid="stChatInput"] form,
+[data-testid="stChatInput"] div[data-baseweb="textarea"],
+[data-testid="stChatInput"] div[data-baseweb="base-input"] {
+    background-color: transparent !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+/* Textarea input itself: Dark text on transparent background */
+.stApp [data-testid="stChatInput"] textarea,
+.stApp [data-testid="stChatInputTextArea"],
+[data-testid="stChatInput"] textarea,
+[data-testid="stChatInputTextArea"] {
+    color: #0f172a !important;
+    background-color: transparent !important;
+    background: transparent !important;
+    -webkit-text-fill-color: #0f172a !important;
+    font-size: 0.95rem !important;
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.stApp [data-testid="stChatInput"] textarea::placeholder,
+.stApp [data-testid="stChatInputTextArea"]::placeholder,
+[data-testid="stChatInput"] textarea::placeholder,
+[data-testid="stChatInputTextArea"]::placeholder {
+    color: #94a3b8 !important;
+    -webkit-text-fill-color: #94a3b8 !important;
+}
+
+/* Send Button: Blue rounded square (#2175fc) with white up-arrow, matching user mockup */
+.stApp [data-testid="stChatInput"] button,
+.stApp [data-testid="stChatInputSubmitButton"],
+.stApp button[data-testid="stChatInputSubmitButton"],
+[data-testid="stChatInput"] button,
+[data-testid="stChatInputSubmitButton"],
+button[data-testid="stChatInputSubmitButton"] {
+    background-color: #2175fc !important;
+    background: #2175fc !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    width: 32px !important;
+    height: 32px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 2px 6px rgba(33, 117, 252, 0.25) !important;
+    cursor: pointer !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transition: all 0.15s ease !important;
+}
+
+.stApp [data-testid="stChatInput"] button:disabled,
+.stApp [data-testid="stChatInputSubmitButton"]:disabled,
+.stApp button[data-testid="stChatInputSubmitButton"]:disabled,
+[data-testid="stChatInput"] button:disabled,
+[data-testid="stChatInputSubmitButton"]:disabled,
+button[data-testid="stChatInputSubmitButton"]:disabled {
+    background-color: #2175fc !important;
+    background: #2175fc !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 2px 6px rgba(33, 117, 252, 0.25) !important;
+}
+
+.stApp [data-testid="stChatInput"] button:hover,
+.stApp [data-testid="stChatInputSubmitButton"]:hover,
+.stApp button[data-testid="stChatInputSubmitButton"]:hover,
+[data-testid="stChatInput"] button:hover,
+[data-testid="stChatInputSubmitButton"]:hover,
+button[data-testid="stChatInputSubmitButton"]:hover {
+    background-color: #1a62dc !important;
+    background: #1a62dc !important;
+    color: #ffffff !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 3px 8px rgba(33, 117, 252, 0.35) !important;
+}
+
+/* All inner button elements must have no borders/outlines/shadows */
+.stApp [data-testid="stChatInput"] button *,
+.stApp [data-testid="stChatInputSubmitButton"] *,
+[data-testid="stChatInput"] button *,
+[data-testid="stChatInputSubmitButton"] * {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Arrow inside button: Pure white, borderless, stroke-free */
+.stApp [data-testid="stChatInput"] button svg,
+.stApp [data-testid="stChatInputSubmitButton"] svg,
+[data-testid="stChatInput"] button svg,
+[data-testid="stChatInputSubmitButton"] svg {
+    color: #ffffff !important;
+    fill: currentColor !important;
+    stroke: none !important;
+    stroke-width: 0 !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Ensure the bounding-box hitbox path stays transparent and is not filled with white */
+.stApp [data-testid="stChatInput"] button svg path[fill="none"],
+.stApp [data-testid="stChatInputSubmitButton"] svg path[fill="none"],
+.stApp [data-testid="stChatInput"] button svg rect[fill="none"],
+.stApp [data-testid="stChatInputSubmitButton"] svg rect[fill="none"],
+[data-testid="stChatInput"] button svg path[fill="none"],
+[data-testid="stChatInputSubmitButton"] svg path[fill="none"],
+[data-testid="stChatInput"] button svg rect[fill="none"],
+[data-testid="stChatInputSubmitButton"] svg rect[fill="none"] {
+    fill: none !important;
+    stroke: none !important;
+    stroke-width: 0 !important;
+}
+
+/* Only the visible arrow path gets pure white fill */
+.stApp [data-testid="stChatInput"] button svg path:not([fill="none"]),
+.stApp [data-testid="stChatInputSubmitButton"] svg path:not([fill="none"]),
+[data-testid="stChatInput"] button svg path:not([fill="none"]),
+[data-testid="stChatInputSubmitButton"] svg path:not([fill="none"]) {
+    fill: #ffffff !important;
+    color: #ffffff !important;
+    stroke: none !important;
+    stroke-width: 0 !important;
+}
+
+/* ==============================================================================
+   3. Panel 2: Chat History View
+   ============================================================================== */
+
+/* Clear All History Button */
+.stApp div[class*="st-key-btn_clear_all_hist"] button,
+div[class*="st-key-btn_clear_all_hist"] button,
+.stApp .clear-btn div.stButton > button,
+.clear-btn div.stButton > button {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #475569 !important;
+    border-radius: 8px !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+    height: 38px !important;
+    padding: 6px 14px !important;
+    transition: all 0.15s ease !important;
+}
+
+.stApp div[class*="st-key-btn_clear_all_hist"] button p,
+div[class*="st-key-btn_clear_all_hist"] button p,
+.stApp .clear-btn div.stButton > button p {
+    color: #475569 !important;
+    font-size: 0.85rem !important;
+    font-weight: 500 !important;
+}
+
+.stApp div[class*="st-key-btn_clear_all_hist"] button:hover,
+div[class*="st-key-btn_clear_all_hist"] button:hover,
+.stApp .clear-btn div.stButton > button:hover,
+.clear-btn div.stButton > button:hover {
+    border-color: #ef4444 !important;
+    color: #ef4444 !important;
+    background-color: #fef2f2 !important;
+    background: #fef2f2 !important;
+}
+
+.stApp div[class*="st-key-btn_clear_all_hist"] button:hover p,
+div[class*="st-key-btn_clear_all_hist"] button:hover p,
+.stApp .clear-btn div.stButton > button:hover p {
+    color: #ef4444 !important;
+}
+
+/* Search input & Category Selectbox in History */
+.stApp div[data-baseweb="input"] {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+    color: #0f172a !important;
+}
+
+.stApp div[data-baseweb="input"] input {
+    background-color: transparent !important;
+    color: #0f172a !important;
+    -webkit-text-fill-color: #0f172a !important;
+}
+
+.stApp div[data-baseweb="input"] input::placeholder {
+    color: #94a3b8 !important;
+}
+
+.stApp div[data-baseweb="select"] > div {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 8px !important;
+    color: #0f172a !important;
+}
+
+.stApp div[data-baseweb="select"] span {
+    color: #0f172a !important;
+}
+
+.stApp div[data-baseweb="select"] svg {
+    fill: #64748b !important;
+}
+
+/* History Cards List Container Spacing */
+.stApp div[class*="st-key-hist_cards_list"] [data-testid="stVerticalBlock"],
+.stApp div[class*="st-key-hist_cards_list"] > div {
+    gap: 10px !important;
+}
+
+.stApp div[class*="st-key-hist_cards_list"] div.element-container {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+}
+
+/* History Cards */
+.stApp div[class*="st-key-hist_card_"],
+div[class*="st-key-hist_card_"],
+.stApp [data-testid="stVerticalBlockBorderWrapper"] {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    padding: 20px 24px !important;
+    min-height: 94px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.stApp div[class*="st-key-hist_card_"]:hover,
+div[class*="st-key-hist_card_"]:hover,
+.stApp [data-testid="stVerticalBlockBorderWrapper"]:hover {
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.stApp div[class*="st-key-hist_card_"] [data-testid="stHorizontalBlock"] {
+    align-items: center !important;
+}
+
+.stApp div[class*="st-key-hist_card_"] div[data-testid="column"] {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
+
+/* History Card Title */
+.stApp .hist-card-title {
+    color: #0f172a !important;
+    font-size: 1.05rem !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.01em !important;
+}
+
+/* History Card Query Preview */
+.stApp .hist-card-query {
+    color: #64748b !important;
+    font-size: 0.86rem !important;
+    line-height: 1.45 !important;
+    margin-top: 4px !important;
+}
+
+/* History Card Date and Time */
+.stApp .hist-card-datetime {
+    color: #64748b !important;
+    font-size: 0.82rem !important;
+    line-height: 1.5 !important;
+    white-space: nowrap !important;
+}
+
+.stApp .hist-card-datetime svg {
+    stroke: #2563eb !important;
+}
+
+/* History Card Icon Badge */
+.stApp .hist-icon-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 50% !important;
+    color: #ffffff !important;
+    font-size: 1rem !important;
+    flex-shrink: 0 !important;
+}
+
+/* History Card Chevron Button (>) - Ice Blue Squircle with Blue Arrow */
+.stApp div[class*="st-key-open_chat_"] button,
+div[class*="st-key-open_chat_"] button,
+.stApp div[class*="st-key-hist_card_"] div.stButton > button,
+.stApp [data-testid="stVerticalBlockBorderWrapper"] div.stButton > button,
+.stApp [data-testid="stVerticalBlockBorderWrapper"] div[data-testid="column"] div.stButton > button {
+    background-color: #f1f7fe !important;
+    background: #f1f7fe !important;
+    border: 1px solid #c7dcfc !important;
+    color: #1d68f0 !important;
+    border-radius: 8px !important;
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    height: 38px !important;
+    min-height: 38px !important;
+    max-height: 38px !important;
+    width: 38px !important;
+    min-width: 38px !important;
+    max-width: 38px !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: none !important;
+    transition: all 0.15s ease-in-out !important;
+    cursor: pointer !important;
+}
+
+.stApp div[class*="st-key-open_chat_"] button p,
+div[class*="st-key-open_chat_"] button p,
+.stApp div[class*="st-key-hist_card_"] div.stButton > button p,
+.stApp [data-testid="stVerticalBlockBorderWrapper"] div.stButton > button p {
+    color: #1d68f0 !important;
+    font-weight: 700 !important;
+    font-size: 1.15rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+}
+
+.stApp div[class*="st-key-open_chat_"] button:hover,
+div[class*="st-key-open_chat_"] button:hover,
+.stApp div[class*="st-key-hist_card_"] div.stButton > button:hover,
+.stApp [data-testid="stVerticalBlockBorderWrapper"] div.stButton > button:hover {
+    background-color: #1d68f0 !important;
+    background: #1d68f0 !important;
+    border-color: #1d68f0 !important;
+    color: #ffffff !important;
+}
+
+.stApp div[class*="st-key-open_chat_"] button:hover p,
+div[class*="st-key-open_chat_"] button:hover p,
+.stApp div[class*="st-key-hist_card_"] div.stButton > button:hover p,
+.stApp [data-testid="stVerticalBlockBorderWrapper"] div.stButton > button:hover p {
+    color: #ffffff !important;
+}
+
+/* History Pills */
+.stApp .pill-cancer { background: #f3e8ff !important; color: #7c3aed !important; border: 1px solid #e9d5ff !important; }
+.stApp .pill-diabetes { background: #ccfbf1 !important; color: #0d9488 !important; border: 1px solid #99f6e4 !important; }
+.stApp .pill-respiratory { background: #dbeafe !important; color: #2563eb !important; border: 1px solid #bfdbfe !important; }
+.stApp .pill-cardiovascular { background: #ffe4e6 !important; color: #e11d48 !important; border: 1px solid #fecdd3 !important; }
+.stApp .pill-nutrition { background: #fef3c7 !important; color: #d97706 !important; border: 1px solid #fde68a !important; }
+.stApp .pill-renal { background: #cffafe !important; color: #0891b2 !important; border: 1px solid #a5f3fc !important; }
+.stApp .pill-general { background: #f1f5f9 !important; color: #475569 !important; border: 1px solid #e2e8f0 !important; }
+
+/* Empty state boxes in History */
+.stApp .hist-empty-card,
+.stApp div[style*="background-color: #0f172a; border: 1px solid #1e293b"],
+div[style*="background-color: #0f172a; border: 1px solid #1e293b"] {
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+}
+
+.stApp .hist-empty-title {
+    color: #0f172a !important;
+}
+
+.stApp .hist-empty-desc {
+    color: #64748b !important;
+}
+
+/* ==============================================================================
+   4. Panels 3 & 4: Cards (About & Settings)
+   ============================================================================== */
+
+/* White Cards */
+.stApp .settings-card,
+.settings-card {
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 12px !important;
+    padding: 20px 24px !important;
+    margin-bottom: 20px !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03) !important;
+}
+
+.stApp .settings-title,
+.settings-title {
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-bottom: 2px !important;
+}
+
+.stApp .settings-sub,
+.settings-sub {
+    font-size: 0.82rem !important;
+    color: #64748b !important;
+    margin-bottom: 14px !important;
+}
+
+/* ==============================================================================
+   About Page Colored Cards (Light Theme - Matching Exactly User Reference Image)
+   ============================================================================== */
+.stApp .about-card,
+.about-card {
+    border-radius: 12px !important;
+    padding: 20px 24px !important;
+    margin-bottom: 18px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+}
+
+.stApp .about-card-header,
+.about-card-header {
+    display: flex !important;
+    align-items: center !important;
+    gap: 14px !important;
+    margin-bottom: 12px !important;
+}
+
+.stApp .about-icon-badge,
+.about-icon-badge {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+.stApp .about-card-title,
+.about-card-title {
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+}
+
+.stApp .about-card-sub,
+.about-card-sub {
+    font-size: 0.84rem !important;
+    font-weight: 500 !important;
+    margin-top: 2px !important;
+}
+
+.stApp .about-card-body,
+.about-card-body {
+    font-size: 0.90rem !important;
+    line-height: 1.65 !important;
+}
+
+.stApp .about-bullet-list,
+.about-bullet-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+}
+
+.stApp .about-bullet,
+.about-bullet {
+    display: flex !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+}
+
+.stApp .about-bullet .bullet-dot,
+.about-bullet .bullet-dot {
+    font-size: 1.15rem !important;
+    line-height: 1.2 !important;
+}
+
+/* 1. Blue Card: NIH MedQuAD Dataset */
+.stApp .about-card-blue,
+.about-card-blue {
+    background-color: #f0f7ff !important;
+    background: #f0f7ff !important;
+    border: 1px solid #bfdbfe !important;
+}
+
+.stApp .about-icon-blue,
+.about-icon-blue {
+    background-color: #dbeafe !important;
+    background: #dbeafe !important;
+}
+
+.stApp .about-title-blue,
+.about-title-blue {
+    color: #1e3a8a !important;
+}
+
+.stApp .about-sub-blue,
+.about-sub-blue {
+    color: #2563eb !important;
+}
+
+.stApp .about-body-blue,
+.about-body-blue {
+    color: #1e293b !important;
+}
+
+.stApp .about-body-blue b,
+.about-body-blue b {
+    color: #0f172a !important;
+    font-weight: 700 !important;
+}
+
+/* 2. Green Card: Information Retrieval Pipeline */
+.stApp .about-card-green,
+.about-card-green {
+    background-color: #f0fdf9 !important;
+    background: #f0fdf9 !important;
+    border: 1px solid #a7f3d0 !important;
+}
+
+.stApp .about-icon-green,
+.about-icon-green {
+    background-color: #ccfbf1 !important;
+    background: #ccfbf1 !important;
+}
+
+.stApp .about-title-green,
+.about-title-green {
+    color: #064e3b !important;
+}
+
+.stApp .about-sub-green,
+.about-sub-green {
+    color: #0d9488 !important;
+}
+
+.stApp .about-body-green,
+.about-body-green {
+    color: #1e293b !important;
+}
+
+.stApp .about-body-green b,
+.about-body-green b {
+    color: #064e3b !important;
+    font-weight: 700 !important;
+}
+
+.stApp .about-card-green .bullet-dot,
+.about-card-green .bullet-dot {
+    color: #0d9488 !important;
+}
+
+/* 3. Red Card: Clinical & Legal Disclaimer */
+.stApp .about-card-red,
+.about-card-red {
+    background-color: #fef2f2 !important;
+    background: #fef2f2 !important;
+    border: 1px solid #fecaca !important;
+}
+
+.stApp .about-icon-red,
+.about-icon-red {
+    background-color: #fee2e2 !important;
+    background: #fee2e2 !important;
+}
+
+.stApp .about-title-red,
+.about-title-red {
+    color: #dc2626 !important;
+}
+
+.stApp .about-body-red,
+.about-body-red {
+    color: #7f1d1d !important;
+}
+
+.stApp .settings-label,
+.settings-label {
+    font-size: 0.92rem !important;
+    font-weight: 600 !important;
+    color: #1e293b !important;
+}
+
+.stApp .settings-desc,
+.settings-desc {
+    font-size: 0.8rem !important;
+    color: #64748b !important;
+    margin-top: 2px !important;
+}
+
+.stApp hr,
+hr {
+    border-top: 1px solid #e2e8f0 !important;
+}
+
+/* Settings Theme Buttons (Panel 4) */
+/* Active theme (☀️ Light): Primary Blue Button */
+.stApp div[data-testid="column"] button#set_theme_light,
+.stApp button[key="set_theme_light"][kind="primary"],
+.stApp button#b_set_theme_light {
+    background-color: #1d68f0 !important;
+    border: 1px solid #1d68f0 !important;
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 6px rgba(29, 104, 240, 0.25) !important;
+}
+
+/* Inactive theme (🌙 Dark): White / Transparent with border */
+.stApp div[data-testid="column"] button#set_theme_dark,
+.stApp button[key="set_theme_dark"][kind="secondary"] {
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    color: #475569 !important;
+}
+
+/* Settings Page: Clear and Reset Action Buttons in Light Theme (Slightly Light #f1f5f9) */
+.stApp button[key*="btn_settings_"],
+.stApp button[id*="btn_settings_"] {
+    background-color: #f1f5f9 !important;
+    background: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #1e293b !important;
+    font-size: 0.86rem !important;
+    font-weight: 500 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+    transition: all 0.15s ease !important;
+}
+
+.stApp button[key*="btn_settings_"] p,
+.stApp button[id*="btn_settings_"] p {
+    color: #1e293b !important;
+    font-size: 0.86rem !important;
+    font-weight: 500 !important;
+}
+
+.stApp button[key*="btn_settings_"]:hover,
+.stApp button[id*="btn_settings_"]:hover {
+    background-color: #e2e8f0 !important;
+    background: #e2e8f0 !important;
+    border-color: #94a3b8 !important;
+    color: #0f172a !important;
+}
+
+.stApp button[key*="btn_settings_"]:hover p,
+.stApp button[id*="btn_settings_"]:hover p {
+    color: #0f172a !important;
+}
+
+/* About Disclaimer Card (Panel 3) */
+.stApp div[style*="background-color: rgba(239, 68, 68, 0.1)"] {
+    background-color: #fef2f2 !important;
+    border: 1px solid #fecaca !important;
+    border-radius: 8px !important;
+}
+
+.stApp div[style*="background-color: rgba(239, 68, 68, 0.1)"] [style*="color: #fca5a5"],
+.stApp div[style*="background-color: rgba(239, 68, 68, 0.1)"] [style*="color:#fca5a5"] {
+    color: #dc2626 !important;
+}
+
+.stApp div[style*="background-color: rgba(239, 68, 68, 0.1)"] [style*="color: #cbd5e1"],
+.stApp div[style*="background-color: rgba(239, 68, 68, 0.1)"] [style*="color:#cbd5e1"] {
+    color: #991b1b !important;
+}
+
+/* Streamlit Toggle / Switch in Panel 4 */
+.stApp div[data-testid="stToggle"] label span {
+    color: #334155 !important;
+}
+
+/* ==============================================================================
+   5. Active Chat View (When conversation has turns)
+   ============================================================================== */
+
+/* Active Chat Header */
+.stApp .chat-header-title {
+    color: #0f172a !important;
+    font-size: 1.85rem !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.stApp .chat-header-subtitle {
+    color: #64748b !important;
+    font-size: 0.9rem !important;
+}
+
+/* Chat Stat Badges in Light Theme */
+.stApp .stat-badge,
+.stat-badge {
+    background-color: #eff6ff !important;
+    background: #eff6ff !important;
+    border: 1px solid #dbeafe !important;
+    border-radius: 8px !important;
+    color: #2563eb !important;
+    padding: 6px 14px !important;
+    font-size: 0.84rem !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.stApp .stat-badge svg {
+    stroke: #2563eb !important;
+}
+
+.stApp .stat-badge span,
+.stat-badge span {
+    color: #2563eb !important;
+}
+
+.stApp .stat-badge-bold,
+.stat-badge-bold {
+    color: #2563eb !important;
+    font-weight: 700 !important;
+    margin-right: 3px !important;
+}
+
+/* Top Settings Gear Button */
+.stApp .chat-top-gear-wrap div.stButton > button {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #475569 !important;
+    font-size: 1.25rem !important;
+    padding: 4px !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 8px !important;
+    transition: all 0.15s ease !important;
+}
+
+.stApp .chat-top-gear-wrap div.stButton > button:hover {
+    color: #1d4ed8 !important;
+    background-color: #e2e8f0 !important;
+}
+
+/* User Message Bubble in Light Theme (Image 2 style) */
+.stApp .user-msg-row {
+    display: flex !important;
+    justify-content: flex-end !important;
+    align-items: flex-start !important;
+    gap: 12px !important;
+    margin-top: 24px !important;
+    margin-bottom: 20px !important;
+}
+
+.stApp .user-avatar-circle {
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 50% !important;
+    background-color: #2563eb !important;
+    border: 1px solid #1d4ed8 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%23ffffff%27%3E%3Cpath%20d%3D%27M12%2012c2.21%200%204-1.79%204-4s-1.79-4-4-4-4%201.79-4%204%201.79%204%204%204zm0%202c-2.67%200-8%201.34-8%204v2h16v-2c0-2.66-5.33-4-8-4z%27/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 18px 18px !important;
+    flex-shrink: 0 !important;
+    margin-top: 3px !important;
+}
+
+.stApp .user-bubble-box {
+    background-color: #e0f2fe !important;
+    background: #e0f2fe !important;
+    border: 1px solid #bae6fd !important;
+    border-radius: 12px 12px 2px 12px !important;
+    padding: 12px 20px 8px 20px !important;
+    max-width: 78% !important;
+    min-width: 240px !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03) !important;
+}
+
+.stApp .user-msg-text {
+    color: #0f172a !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    margin-bottom: 4px !important;
+}
+
+.stApp .user-msg-time {
+    color: #64748b !important;
+    font-size: 0.72rem !important;
+    text-align: right !important;
+    line-height: 1 !important;
+}
+
+/* Bot Avatar */
+.stApp .bot-avatar-circle {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 12px !important;
+    background-color: #eff6ff !important;
+    border: 1px solid #bfdbfe !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27%232563eb%27%3E%3Cpath%20d%3D%27M12%202a2%202%200%200%201%202%202c0%20.74-.4%201.39-1%201.73V7h1a7%207%200%200%201%207%207h1a1%201%200%200%201%201%201v3a1%201%200%200%201-1%201h-1v1a2%202%200%200%201-2%202H5a2%202%200%200%201-2-2v-1H2a1%201%200%200%201-1-1v-3a1%201%200%200%201%201-1h1a7%207%200%200%201%207-7h1V5.73c-.6-.34-1-.99-1-1.73a2%202%200%200%201%202-2zM7.5%2013a1.5%201.5%200%201%200%200%203%201.5%201.5%200%200%200%200-3zm9%200a1.5%201.5%200%201%200%200%203%201.5%201.5%200%200%200%200-3z%27/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 22px 22px !important;
+    flex-shrink: 0 !important;
+    margin-top: 3px !important;
+}
+
+/* Unified Assistant Card in Light Theme */
+.stApp .assistant-unified-card {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 16px !important;
+    padding: 22px 26px !important;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04) !important;
+    margin-bottom: 16px !important;
+}
+
+/* Clinical Entities Pill inside Assistant Card */
+.stApp .chat-entity-pill {
+    display: inline-flex !important;
+    align-items: center !important;
+    font-size: 0.82rem !important;
+    font-weight: 700 !important;
+    padding: 4px 12px !important;
+    border-radius: 8px !important;
+}
+
+.stApp .entity-pill-disease {
+    background-color: #fee2e2 !important;
+    background: #fee2e2 !important;
+    color: #dc2626 !important;
+    border: 1px solid #fecaca !important;
+}
+
+.stApp .entity-pill-symptom {
+    background-color: #ffedd5 !important;
+    background: #ffedd5 !important;
+    color: #c2410c !important;
+    border: 1px solid #fed7aa !important;
+}
+
+.stApp .entity-pill-treatment {
+    background-color: #dcfce7 !important;
+    background: #dcfce7 !important;
+    color: #15803d !important;
+    border: 1px solid #bbf7d0 !important;
+}
+
+.stApp .entity-pill-diagnostic {
+    background-color: #eff6ff !important;
+    background: #eff6ff !important;
+    color: #1d4ed8 !important;
+    border: 1px solid #bfdbfe !important;
+}
+
+/* Retrieval Match Badge */
+.stApp .card-match-badge {
+    background-color: #eff6ff !important;
+    background: #eff6ff !important;
+    border: 1px solid #dbeafe !important;
+    border-radius: 8px !important;
+    padding: 6px 14px !important;
+    text-align: center !important;
+    min-width: 90px !important;
+    flex-shrink: 0 !important;
+}
+
+.stApp .card-matched-q {
+    color: #2563eb !important;
+    font-weight: 700 !important;
+}
+
+/* Card Metadata Row */
+.stApp .card-metadata-row {
+    font-size: 0.84rem !important;
+    color: #64748b !important;
+}
+
+.stApp .meta-label {
+    color: #64748b !important;
+    font-weight: 500 !important;
+}
+
+.stApp .meta-val {
+    color: #334155 !important;
+    font-weight: 600 !important;
+}
+
+.stApp .meta-sep {
+    color: #cbd5e1 !important;
+    margin: 0 4px !important;
+}
+
+/* Answer Body Text in Light Theme */
+.stApp .answer-text,
+.stApp .answer-text *,
+.stApp .answer-text p,
+.stApp .answer-text div {
+    color: #1e293b !important;
+}
+
+.stApp .answer-text b,
+.stApp .answer-text strong {
+    color: #0f172a !important;
+}
+
+.stApp .answer-text [style*="color: #2563eb"],
+.stApp .answer-text [style*="color:#2563eb"] {
+    color: #2563eb !important;
+}
+
+.stApp .answer-text ul {
+    margin: 8px 0 !important;
+    padding-left: 20px !important;
+}
+
+.stApp .answer-text li {
+    margin-bottom: 4px !important;
+    color: #1e293b !important;
+    line-height: 1.6 !important;
+}
+
+.stApp .answer-text li::marker {
+    color: #2563eb !important;
+}
+
+/* Card Source Footer Bar */
+.stApp .card-source-bar {
+    background-color: #f0f7ff !important;
+    background: #f0f7ff !important;
+    border: 1px solid #e0f2fe !important;
+    border-radius: 8px !important;
+    padding: 10px 16px !important;
+    margin-top: 16px !important;
+}
+
+/* Suggestions Header in Light Theme */
+.stApp .sugg-header-icon {
+    stroke: #2563eb !important;
+    color: #2563eb !important;
+}
+
+.stApp .sugg-header-title {
+    color: #1e40af !important;
+    font-weight: 700 !important;
+    font-size: 0.95rem !important;
+}
+
+.stApp .sugg-header-view-all,
+.sugg-header-view-all {
+    display: none !important;
+}
+
+/* Suggestions Box Container (matching Image 2) */
+.stApp div[class*="st-key-sugg_box_"] {
+    background-color: #f8fbfe !important;
+    background: #f8fbfe !important;
+    border: 1px solid #dbeafe !important;
+    border-radius: 14px !important;
+    padding: 16px 20px !important;
+    box-shadow: none !important;
+    margin-top: 14px !important;
+    margin-bottom: 24px !important;
+}
+
+/* Suggestions Buttons 2x2 Grid in Light Theme */
+.stApp div[class*="st-key-sugg_box_"] div.stButton > button {
+    background-color: #ffffff !important;
+    background: #ffffff !important;
+    border: 1px solid #bfdbfe !important;
+    border-radius: 8px !important;
+    color: #1e40af !important;
+    font-size: 0.85rem !important;
+    font-weight: 600 !important;
+    padding: 10px 14px !important;
+    min-height: 44px !important;
+    text-align: left !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02) !important;
+    margin-bottom: 8px !important;
+    transition: all 0.15s ease !important;
+}
+
+.stApp div[class*="st-key-sugg_box_"] div.stButton > button p {
+    color: #1e40af !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    text-align: left !important;
+    margin: 0 !important;
+}
+
+.stApp div[class*="st-key-sugg_box_"] div.stButton > button:hover {
+    background-color: #eff6ff !important;
+    background: #eff6ff !important;
+    border-color: #2563eb !important;
+}
+
+.stApp div[class*="st-key-sugg_box_"] div.stButton > button:hover p {
+    color: #1d4ed8 !important;
+}

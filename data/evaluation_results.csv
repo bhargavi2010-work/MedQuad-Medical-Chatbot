@@ -1,0 +1,5 @@
+Method,Top-1 Acc (%),Top-3 Acc (%),Top-5 Acc (%),Source Citations (%)
+TFIDF,82.9,88.6,91.4,100.0
+DENSE,91.4,94.3,94.3,100.0
+HYBRID,88.6,88.6,94.3,100.0
+HYBRID + RERANK,94.3,94.3,94.3,100.0
