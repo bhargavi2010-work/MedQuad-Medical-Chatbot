@@ -95,7 +95,7 @@ MedQuad-Medical-Chatbot/
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/MedQuad-Medical-Chatbot.git
+git clone https://github.com/bhargavi2010-work/MedQuad-Medical-Chatbot.git
 cd MedQuad-Medical-Chatbot
 ```
 
